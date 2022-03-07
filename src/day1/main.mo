@@ -18,12 +18,27 @@ actor {
 //create as mutable variable
  var counter : Nat = 0;
 
- counter := 10;
- counter := 20;
  public func increment_counter(n : Nat) : async Nat{
    counter := counter + n;
    return(counter);
  };
+  
+  public func clear_counter() : async Text {
+    counter := 0;
+    return("reset the counter");
+  };
 
+  //challenge 5
+   let a : bool = true;
+   let b : bool = false;
 
+ private func div(n :Nat , m : Nat) : async Nat {
+    
+    if(n/m) {
+            return(true));
+        } 
+        else {
+            return (false);
+        };
+ };
 };
